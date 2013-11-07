@@ -1,0 +1,34 @@
+{
+    "dependencies": [
+        {
+            "interfaces": "pallo\\library\\image\\io\\ImageIO",
+            "class": "pallo\\library\\image\\io\\GifImageIO",
+            "id": "gif"
+        },
+        {
+            "interfaces": "pallo\\library\\image\\io\\ImageIO",
+            "class": "pallo\\library\\image\\io\\JpgImageIO",
+            "id": "jpeg"
+        },
+        {
+            "interfaces": "pallo\\library\\image\\io\\ImageIO",
+            "class": "pallo\\library\\image\\io\\JpgImageIO",
+            "id": "jpg"
+        },
+        {
+            "interfaces": "pallo\\library\\image\\io\\ImageIO",
+            "class": "pallo\\library\\image\\io\\PngImageIO",
+            "id": "png"
+        },
+        {
+            "interfaces": "pallo\\library\\image\\thumbnail\\Thumbnailer",
+            "class": "pallo\\library\\image\\thumbnail\\CropThumbnailer",
+            "id": "crop"
+        },
+        {
+            "interfaces": "pallo\\library\\image\\thumbnail\\Thumbnailer",
+            "class": "pallo\\library\\image\\thumbnail\\ResizeThumbnailer",
+            "id": "resize"
+        }
+    ]
+}
