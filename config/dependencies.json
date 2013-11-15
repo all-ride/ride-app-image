@@ -8,17 +8,58 @@
         {
             "interfaces": "pallo\\library\\image\\io\\ImageIO",
             "class": "pallo\\library\\image\\io\\JpgImageIO",
-            "id": "jpeg"
-        },
-        {
-            "interfaces": "pallo\\library\\image\\io\\ImageIO",
-            "class": "pallo\\library\\image\\io\\JpgImageIO",
             "id": "jpg"
         },
         {
             "interfaces": "pallo\\library\\image\\io\\ImageIO",
             "class": "pallo\\library\\image\\io\\PngImageIO",
             "id": "png"
+        },
+        {
+            "interfaces": "pallo\\library\\image\\io\\ImageFactory",
+            "class": "pallo\\library\\image\\io\\GenericImageFactory",
+            "id": "generic",
+            "calls": [
+                {
+                    "method": "addImageIO",
+                    "arguments": [
+                        {
+                            "name": "imageIO",
+                            "type": "dependency",
+                            "properties": {
+                                "interface": "pallo\\library\\image\\io\\ImageIO",
+                                "id": "png"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "method": "addImageIO",
+                    "arguments": [
+                        {
+                            "name": "imageIO",
+                            "type": "dependency",
+                            "properties": {
+                                "interface": "pallo\\library\\image\\io\\ImageIO",
+                                "id": "jpg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "method": "addImageIO",
+                    "arguments": [
+                        {
+                            "name": "imageIO",
+                            "type": "dependency",
+                            "properties": {
+                                "interface": "pallo\\library\\image\\io\\ImageIO",
+                                "id": "gif"
+                            }
+                        }
+                    ]
+                }
+            ]
         },
         {
             "interfaces": "pallo\\library\\image\\thumbnail\\Thumbnailer",
