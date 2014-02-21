@@ -1,23 +1,23 @@
 {
     "dependencies": [
         {
-            "interfaces": "pallo\\library\\image\\io\\ImageIO",
-            "class": "pallo\\library\\image\\io\\GifImageIO",
+            "interfaces": "ride\\library\\image\\io\\ImageIO",
+            "class": "ride\\library\\image\\io\\GifImageIO",
             "id": "gif"
         },
         {
-            "interfaces": "pallo\\library\\image\\io\\ImageIO",
-            "class": "pallo\\library\\image\\io\\JpgImageIO",
+            "interfaces": "ride\\library\\image\\io\\ImageIO",
+            "class": "ride\\library\\image\\io\\JpgImageIO",
             "id": "jpg"
         },
         {
-            "interfaces": "pallo\\library\\image\\io\\ImageIO",
-            "class": "pallo\\library\\image\\io\\PngImageIO",
+            "interfaces": "ride\\library\\image\\io\\ImageIO",
+            "class": "ride\\library\\image\\io\\PngImageIO",
             "id": "png"
         },
         {
-            "interfaces": "pallo\\library\\image\\io\\ImageFactory",
-            "class": "pallo\\library\\image\\io\\GenericImageFactory",
+            "interfaces": "ride\\library\\image\\io\\ImageFactory",
+            "class": "ride\\library\\image\\io\\GenericImageFactory",
             "id": "generic",
             "calls": [
                 {
@@ -27,7 +27,7 @@
                             "name": "imageIO",
                             "type": "dependency",
                             "properties": {
-                                "interface": "pallo\\library\\image\\io\\ImageIO",
+                                "interface": "ride\\library\\image\\io\\ImageIO",
                                 "id": "png"
                             }
                         }
@@ -40,7 +40,7 @@
                             "name": "imageIO",
                             "type": "dependency",
                             "properties": {
-                                "interface": "pallo\\library\\image\\io\\ImageIO",
+                                "interface": "ride\\library\\image\\io\\ImageIO",
                                 "id": "jpg"
                             }
                         }
@@ -53,7 +53,7 @@
                             "name": "imageIO",
                             "type": "dependency",
                             "properties": {
-                                "interface": "pallo\\library\\image\\io\\ImageIO",
+                                "interface": "ride\\library\\image\\io\\ImageIO",
                                 "id": "gif"
                             }
                         }
@@ -62,13 +62,13 @@
             ]
         },
         {
-            "interfaces": "pallo\\library\\image\\thumbnail\\Thumbnailer",
-            "class": "pallo\\library\\image\\thumbnail\\CropThumbnailer",
+            "interfaces": "ride\\library\\image\\thumbnail\\Thumbnailer",
+            "class": "ride\\library\\image\\thumbnail\\CropThumbnailer",
             "id": "crop"
         },
         {
-            "interfaces": "pallo\\library\\image\\thumbnail\\Thumbnailer",
-            "class": "pallo\\library\\image\\thumbnail\\ResizeThumbnailer",
+            "interfaces": "ride\\library\\image\\thumbnail\\Thumbnailer",
+            "class": "ride\\library\\image\\thumbnail\\ResizeThumbnailer",
             "id": "resize"
         }
     ]
