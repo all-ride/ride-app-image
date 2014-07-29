@@ -1,75 +1,44 @@
 {
     "dependencies": [
         {
-            "interfaces": "ride\\library\\image\\io\\ImageIO",
-            "class": "ride\\library\\image\\io\\GifImageIO",
-            "id": "gif"
+            "interfaces": "ride\\library\\image\\transformation\\Transformation",
+            "class": "ride\\library\\image\\transformation\\CropTransformation",
+            "id": "crop"
         },
         {
-            "interfaces": "ride\\library\\image\\io\\ImageIO",
-            "class": "ride\\library\\image\\io\\JpgImageIO",
-            "id": "jpg"
+            "interfaces": "ride\\library\\image\\transformation\\Transformation",
+            "class": "ride\\library\\image\\transformation\\ResizeTransformation",
+            "id": "resize"
         },
         {
-            "interfaces": "ride\\library\\image\\io\\ImageIO",
-            "class": "ride\\library\\image\\io\\PngImageIO",
-            "id": "png"
+            "interfaces": "ride\\library\\image\\Image",
+            "class": "ride\\library\\image\\GdImage",
+            "id": "gd"
         },
         {
-            "interfaces": "ride\\library\\image\\io\\ImageFactory",
-            "class": "ride\\library\\image\\io\\GenericImageFactory",
-            "id": "generic",
+            "interfaces": "ride\\library\\image\\Image",
+            "class": "ride\\library\\image\\ImagickImage",
+            "id": "imagick"
+        },
+        {
+            "interfaces": "ride\\library\\image\\ImageFactory",
+            "class": "ride\\application\\image\\DependencyImageFactory",
+            "id": "dependency",
             "calls": [
                 {
-                    "method": "addImageIO",
+                    "method": "__construct",
                     "arguments": [
                         {
-                            "name": "imageIO",
-                            "type": "dependency",
+                            "name": "id",
+                            "type": "parameter",
                             "properties": {
-                                "interface": "ride\\library\\image\\io\\ImageIO",
-                                "id": "png"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "method": "addImageIO",
-                    "arguments": [
-                        {
-                            "name": "imageIO",
-                            "type": "dependency",
-                            "properties": {
-                                "interface": "ride\\library\\image\\io\\ImageIO",
-                                "id": "jpg"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "method": "addImageIO",
-                    "arguments": [
-                        {
-                            "name": "imageIO",
-                            "type": "dependency",
-                            "properties": {
-                                "interface": "ride\\library\\image\\io\\ImageIO",
-                                "id": "gif"
+                                "key": "system.image",
+                                "default": "gd"
                             }
                         }
                     ]
                 }
             ]
-        },
-        {
-            "interfaces": "ride\\library\\image\\thumbnail\\Thumbnailer",
-            "class": "ride\\library\\image\\thumbnail\\CropThumbnailer",
-            "id": "crop"
-        },
-        {
-            "interfaces": "ride\\library\\image\\thumbnail\\Thumbnailer",
-            "class": "ride\\library\\image\\thumbnail\\ResizeThumbnailer",
-            "id": "resize"
         }
     ]
 }
