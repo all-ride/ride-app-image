@@ -11,6 +11,11 @@
             "id": "resize"
         },
         {
+            "interfaces": "ride\\library\\image\\optimizer\\Optimizer",
+            "class": "ride\\library\\image\\optimizer\\GenericOptimizer",
+            "id": "generic"
+        },
+        {
             "interfaces": "ride\\library\\image\\Image",
             "class": "ride\\library\\image\\GdImage",
             "id": "gd"
