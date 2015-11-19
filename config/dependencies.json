@@ -11,6 +11,21 @@
             "id": "resize"
         },
         {
+            "interfaces": "ride\\library\\image\\transformation\\Transformation",
+            "class": "ride\\library\\image\\transformation\\FlipTransformation",
+            "id": "flip"
+        },
+        {
+            "interfaces": "ride\\library\\image\\transformation\\Transformation",
+            "class": "ride\\library\\image\\transformation\\BlurTransformation",
+            "id": "blur"
+        },
+        {
+            "interfaces": "ride\\library\\image\\transformation\\Transformation",
+            "class": "ride\\library\\image\\transformation\\GrayscaleTransformation",
+            "id": "grayscale"
+        },
+        {
             "interfaces": "ride\\library\\image\\optimizer\\Optimizer",
             "class": "ride\\library\\image\\optimizer\\GenericOptimizer",
             "id": "generic"
