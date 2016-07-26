@@ -3,12 +3,12 @@
 namespace ride\application\image;
 
 use ride\library\dependency\DependencyInjector;
-use ride\library\image\ImageFactory;
+use ride\library\image\GenericImageFactory;
 
 /**
  * Image factory through the dependency injector
  */
-class DependencyImageFactory implements ImageFactory {
+class DependencyImageFactory extends GenericImageFactory {
 
     /**
      * Instance of the dependency injector
@@ -17,20 +17,14 @@ class DependencyImageFactory implements ImageFactory {
     protected $dependencyInjector;
 
     /**
-     * Id of the image dependency (underlaying library)
-     * @var string
-     */
-    protected $id;
-
-    /**
      * Constructs a new image factory
      * @param \ride\library\dependency\DependencyInjector $dependencyInjector
      * @param string $id Id of the image dependency
      * @return null
      */
-    public function __construct(dependencyInjector $dependencyInjector, $id = null) {
+    public function __construct(dependencyInjector $dependencyInjector, $image = null) {
         $this->dependencyInjector = $dependencyInjector;
-        $this->id = $id;
+        $this->image = $image;
     }
 
     /**
@@ -38,7 +32,7 @@ class DependencyImageFactory implements ImageFactory {
      * @return \ride\library\image\Image
      */
     public function createImage() {
-        return $this->dependencyInjector->get('ride\\library\\image\\Image', $this->id, array());
+        return $this->dependencyInjector->get('ride\\library\\image\\Image', $this->image, array());
     }
 
 }

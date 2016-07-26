@@ -54,7 +54,7 @@
                     "method": "__construct",
                     "arguments": [
                         {
-                            "name": "id",
+                            "name": "image",
                             "type": "parameter",
                             "properties": {
                                 "key": "system.image",
